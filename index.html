@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Daily UI | Challenge 1 | Sign Up Page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="burger">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">product</a></li>
+                    <li><a href="#">prices</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">sign in</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="sign-in">
+                <div class="welcome">
+                    <h1>welcome back !</h1>
+                    <p>we are happy to see you here again ! we were waiting for you.</p>
+                    <span>not have an account ?</span>
+                    <button><a href="#">sign up</a></button>
+                </div>
+                <div class="form">
+                    <h1>login to account</h1>
+                    <div class="icons">
+                        <a href="#"><img src="images/google.svg" alt="google"></a>
+                        <a href="#"><img src="images/facebook.svg" alt="facebook"></a>
+                        <a href="#"><img src="images/linkedin.svg" alt="linkedin"></a>
+                    </div>
+                    <p>or use your email account</p>
+                    <form>
+                        <div class="input-content">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="mail" id="mail" placeholder="Email">
+                            <label for="mail" id="mail-label">email</label>
+                        </div>
+                        <div class="input-content">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="pass" id="pass" placeholder="Password">
+                            <label for="pass" id="pass-label">password</label>
+                            <i class="fa-solid fa-eye eye" id="eye1"></i>
+                            <i class="fa-solid fa-eye-slash eye disable" id="eye-slash1"></i>
+                        </div>
+                    </form>
+                    <a href="#">forgot password ?</a>
+                    <button><a href="#">login</a></button>
+                </div>
+            </div>
+            <div class="sign-up">
+                <div class="form">
+                    <h1>create an account</h1>
+                    <div class="icons">
+                        <a href="#"><img src="images/google.svg" alt="google"></a>
+                        <a href="#"><img src="images/facebook.svg" alt="facebook"></a>
+                        <a href="#"><img src="images/linkedin.svg" alt="linkedin"></a>
+                    </div>
+                    <p>or use your email account</p>
+                    <form>
+                        <div class="input-content">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="user" id="user" placeholder="Username">
+                            <label for="user" id="user-label">username</label>
+                        </div>
+                        <div class="input-content">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <label for="email" id="email-label">email</label>
+                        </div>
+                        <div class="input-content">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <label for="password" id="password-label">password</label>
+                            <i class="fa-solid fa-eye eye" id="eye2"></i>
+                            <i class="fa-solid fa-eye-slash eye disable" id="eye-slash2"></i>
+                        </div>
+                        <div class="input-content">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="conf-password" id="conf-password" placeholder="Confirm Password">
+                            <label for="conf-password" id="conf-password-label">confirm password</label>
+                            <i class="fa-solid fa-eye eye" id="eye3"></i>
+                            <i class="fa-solid fa-eye-slash eye disable" id="eye-slash3"></i>
+                            <p id="warning">Passwords do not match! Please try again</p>
+                        </div>
+                        <button><a href="#">sign in</a></button>
+                    </form>
+                </div>
+                <div class="welcome">
+                    <h1>hello there !</h1>
+                    <p>you are where you find what are you looking for !</p>
+                    <span>already have an account ?</span>
+                    <button><a href="#">login</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

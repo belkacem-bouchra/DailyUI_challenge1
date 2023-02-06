@@ -1,0 +1,498 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    box-shadow: 0 0px 18px 0px rgb(0 0 0 / 50%);
+    background-color: rgba(0,0,0,0.2);
+    height: fit-content;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 50px;
+}
+
+header .logo img {
+    width: 80px;
+}
+
+.burger {
+    position: relative;
+    display: none;
+    z-index: 6;
+}
+
+.burger i {
+    position: absolute;
+    transform: translateY(-50%);
+    font-size: 20px;
+    right: -80px;
+}
+
+.fa-bars {
+    color:#24484f;
+}
+
+.fa-xmark {
+    color:white;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li  {
+    margin: 0 20px;
+}
+
+header ul li a {
+    position: relative;
+    text-transform: uppercase;
+    color: black;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #24484f;
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+
+}
+
+nav ul li:last-of-type a{
+    font-weight: bold;
+}
+
+nav ul li:last-of-type a::after{
+    width: 100%;
+
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.content .container {
+    width: 80%;
+    min-height: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 0 5px 10px 0px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+}
+
+.sign-in,
+.sign-up {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+}
+
+.sign-up {
+    display: none;
+}
+
+.welcome {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.sign-in .welcome {
+    border-radius: 10px 0 0 10px;
+}
+.sign-up .welcome {
+    border-radius: 0 10px 10px 0;
+}
+.sign-in .form {
+    border-radius: 0 10px 10px 0;
+}
+.sign-up .form {
+    border-radius: 10px 0 0 10px;
+}
+
+
+.welcome h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #24484f;
+}
+
+.welcome p{
+    font-weight: 400;
+    margin: 10px 0 30px;
+    text-transform: capitalize;
+    color: #24484f;
+}
+.welcome span{
+    text-transform: capitalize;
+    color: #24484f;
+    border-bottom: 1px solid #24484f;
+    padding: 2px 0;
+    margin-bottom: 10px;
+}
+.welcome button{
+    background-color: #24484f;
+    outline: none;
+    border: 1px solid #24484f;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+.welcome button a{
+    color: white;
+    text-transform: capitalize;
+    transition: 0.5s;
+    font-weight: 700;
+}
+.welcome button:hover {
+    background-color: #13272b;
+    border-color: #13272b;
+}
+
+.welcome button:hover a {
+    color: white;
+}
+.form {
+    width: 50%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #24484f;
+    padding: 10px 0;
+}
+
+.form h1 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+
+.icons {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+    margin: 0 5px;
+    background-color: white;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.5);
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.icons a:hover{
+    width: 38px;
+    height: 38px;
+}
+
+.icons a img {
+    width: 80%;
+    object-fit: cover;
+}
+.form p {
+    color: white;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+    width: 100%;
+}
+.input-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 35px 0;
+}
+
+.input-content i {
+    position: absolute;
+    left: 15px;
+    z-index: 2;
+    color: #24484f;
+}
+
+.input-content input {
+    position: absolute;
+    outline: none;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 20px;
+    padding: 0 10px 0 35px;
+    width: 100%;
+    height: 40px;
+    color: #24484f;
+    
+}
+
+.input-content input:focus {
+    border: 1px solid #24484f;
+    font-weight: 600;
+}
+
+.input-content label {
+    position: absolute;
+    left: 36px;
+    text-transform: capitalize;
+    color: #777;
+    transition: 0.5s;
+}
+
+.input-content label {
+    top: -8px;
+}
+
+.input-content input:focus~label
+ {
+    top: -40px;
+    color: white;
+    font-weight: 600;
+}
+
+.top-label {
+    top: -40px !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.input-content i.eye {
+    position: absolute;
+    right: 15px !important;
+    left: auto;
+}
+
+.disable {
+    display: none;
+}
+
+.form > a {
+    color: #10cab7;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    border-bottom: 1px solid #10cab7;
+    transition: 0.5s;
+}
+
+.form > a:hover {
+    color: white;
+    border-color: white;
+}
+
+.input-content p {
+    color: #10cab7;
+    position: absolute;
+    top: 15px;
+    display: none;
+}
+
+.form button {
+    outline: none;
+    background-color: #10cab7;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: 0.5s;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.form button a {
+    color: #24484f;
+    text-transform: capitalize;
+    transition: 0.5s;
+    font-weight: 700;
+}
+
+.form button:hover {
+    background-color: #177c72;
+    
+}
+
+.form button:hover a {
+    color: white;
+}
+
+.sign-up .form button {
+    margin: 20px auto 0;
+}
+
+/********************/
+
+@media (max-width:659px) {
+    header .container {
+        justify-content: space-around;
+    }
+    header .logo {
+        width: 30%;
+        z-index: 7;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .fa-xmark {
+        display: none;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+        background-color: #000000;
+        z-index: 5;
+        transition: 0.5s;
+    }
+
+    header ul li {
+        margin: 20px 0;
+    }
+    
+    header ul li a{
+        color: white;
+        padding: 5px 0;
+        border-bottom: 2px solid white;
+    }
+
+    header ul li a::after{
+        content: none;
+    }
+
+    .sign-in,
+    .sign-up {
+        flex-direction: column;
+    }
+
+    .welcome,
+    .form {
+        width: 100%;
+    }
+
+    .welcome {
+        padding: 20px 10px;
+
+    }
+
+    .sign-in .welcome {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .sign-in .form {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .welcome h1 {
+        font-size: 16px;
+    }
+
+    .welcome p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .welcome span {
+        font-size: 14px;
+    }
+
+    .welcome button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .form {
+        min-height: fit-content;
+    }
+
+    .form h1 {
+        font-size: 16px;
+    }
+
+    .form p {
+        font-size: 14px;
+    }
+
+    .form span {
+        font-size: 14px;
+    }
+
+    .form button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:768px) {
+    .header .container {
+        justify-content: center;
+        width: 100%;
+    }
+}
